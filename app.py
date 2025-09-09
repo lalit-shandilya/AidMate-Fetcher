@@ -209,11 +209,11 @@ class CronParams(BaseModel):
     min_mag: float = 2.5
     air_lat: Optional[float] = None
     air_lon: Optional[float] = None
-    pull_earthquakes: bool = True
+    pull_earthquakes: bool = False
     pull_nws: bool = True
-    pull_nhc: bool = True
-    pull_firms: bool = True
-    pull_airnow: bool = True
+    pull_nhc: bool = False
+    pull_firms: bool = False
+    pull_airnow: bool = False
 
 @app.get("/health")
 def health():
